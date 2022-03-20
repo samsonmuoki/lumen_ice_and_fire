@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9
+class ComposerStaticInit67a75c58e3cd806ecdfb2f76aa0edb5a
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -70,6 +70,9 @@ class ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9
             'Symfony\\Component\\EventDispatcher\\' => 34,
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\QueryBuilder\\Database\\Factories\\' => 39,
+            'Spatie\\QueryBuilder\\' => 20,
+            'Spatie\\LaravelPackageTools\\' => 27,
         ),
         'R' => 
         array (
@@ -169,8 +172,8 @@ class ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -268,6 +271,18 @@ class ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Spatie\\QueryBuilder\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-query-builder/database/factories',
+        ),
+        'Spatie\\QueryBuilder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-query-builder/src',
+        ),
+        'Spatie\\LaravelPackageTools\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-package-tools/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -334,9 +349,9 @@ class ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/conditionable',
-            1 => __DIR__ . '/..' . '/illuminate/macroable',
-            2 => __DIR__ . '/..' . '/illuminate/collections',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
+            1 => __DIR__ . '/..' . '/illuminate/conditionable',
+            2 => __DIR__ . '/..' . '/illuminate/macroable',
             3 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 
@@ -492,10 +507,18 @@ class ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9
     );
 
     public static $classMap = array (
+        'App\\Book' => __DIR__ . '/../..' . '/app/Book.php',
+        'App\\BooksCharacters' => __DIR__ . '/../..' . '/app/BooksCharacters.php',
+        'App\\Character' => __DIR__ . '/../..' . '/app/Character.php',
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Events\\ExampleEvent' => __DIR__ . '/../..' . '/app/Events/ExampleEvent.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\BookController' => __DIR__ . '/../..' . '/app/Http/Controllers/BookController.php',
+        'App\\Http\\Controllers\\BooksCharactersController' => __DIR__ . '/../..' . '/app/Http/Controllers/BooksCharactersController.php',
+        'App\\Http\\Controllers\\CharacterController' => __DIR__ . '/../..' . '/app/Http/Controllers/CharacterController.php',
+        'App\\Http\\Controllers\\CommentController' => __DIR__ . '/../..' . '/app/Http/Controllers/CommentController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExampleController.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -3577,6 +3600,46 @@ class ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/type/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/type/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Spatie\\LaravelPackageTools\\Exceptions\\InvalidPackage' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Exceptions/InvalidPackage.php',
+        'Spatie\\LaravelPackageTools\\Package' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Package.php',
+        'Spatie\\LaravelPackageTools\\PackageServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/PackageServiceProvider.php',
+        'Spatie\\QueryBuilder\\AllowedFilter' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/AllowedFilter.php',
+        'Spatie\\QueryBuilder\\AllowedInclude' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/AllowedInclude.php',
+        'Spatie\\QueryBuilder\\AllowedSort' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/AllowedSort.php',
+        'Spatie\\QueryBuilder\\Concerns\\AddsFieldsToQuery' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Concerns/AddsFieldsToQuery.php',
+        'Spatie\\QueryBuilder\\Concerns\\AddsIncludesToQuery' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Concerns/AddsIncludesToQuery.php',
+        'Spatie\\QueryBuilder\\Concerns\\FiltersQuery' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Concerns/FiltersQuery.php',
+        'Spatie\\QueryBuilder\\Concerns\\SortsQuery' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Concerns/SortsQuery.php',
+        'Spatie\\QueryBuilder\\Database\\Factories\\AppendModelFactory' => __DIR__ . '/..' . '/spatie/laravel-query-builder/database/factories/AppendModelFactory.php',
+        'Spatie\\QueryBuilder\\Database\\Factories\\SoftDeleteModelFactory' => __DIR__ . '/..' . '/spatie/laravel-query-builder/database/factories/SoftDeleteModelFactory.php',
+        'Spatie\\QueryBuilder\\Database\\Factories\\TestModelFactory' => __DIR__ . '/..' . '/spatie/laravel-query-builder/database/factories/TestModelFactory.php',
+        'Spatie\\QueryBuilder\\Enums\\SortDirection' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Enums/SortDirection.php',
+        'Spatie\\QueryBuilder\\Exceptions\\AllowedFieldsMustBeCalledBeforeAllowedIncludes' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Exceptions/AllowedFieldsMustBeCalledBeforeAllowedIncludes.php',
+        'Spatie\\QueryBuilder\\Exceptions\\InvalidAppendQuery' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Exceptions/InvalidAppendQuery.php',
+        'Spatie\\QueryBuilder\\Exceptions\\InvalidDirection' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Exceptions/InvalidDirection.php',
+        'Spatie\\QueryBuilder\\Exceptions\\InvalidFieldQuery' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Exceptions/InvalidFieldQuery.php',
+        'Spatie\\QueryBuilder\\Exceptions\\InvalidFilterQuery' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Exceptions/InvalidFilterQuery.php',
+        'Spatie\\QueryBuilder\\Exceptions\\InvalidFilterValue' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Exceptions/InvalidFilterValue.php',
+        'Spatie\\QueryBuilder\\Exceptions\\InvalidIncludeQuery' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Exceptions/InvalidIncludeQuery.php',
+        'Spatie\\QueryBuilder\\Exceptions\\InvalidQuery' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Exceptions/InvalidQuery.php',
+        'Spatie\\QueryBuilder\\Exceptions\\InvalidSortQuery' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Exceptions/InvalidSortQuery.php',
+        'Spatie\\QueryBuilder\\Exceptions\\InvalidSubject' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Exceptions/InvalidSubject.php',
+        'Spatie\\QueryBuilder\\Exceptions\\UnknownIncludedFieldsQuery' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Exceptions/UnknownIncludedFieldsQuery.php',
+        'Spatie\\QueryBuilder\\Filters\\Filter' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Filters/Filter.php',
+        'Spatie\\QueryBuilder\\Filters\\FiltersCallback' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Filters/FiltersCallback.php',
+        'Spatie\\QueryBuilder\\Filters\\FiltersExact' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Filters/FiltersExact.php',
+        'Spatie\\QueryBuilder\\Filters\\FiltersPartial' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Filters/FiltersPartial.php',
+        'Spatie\\QueryBuilder\\Filters\\FiltersScope' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Filters/FiltersScope.php',
+        'Spatie\\QueryBuilder\\Filters\\FiltersTrashed' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Filters/FiltersTrashed.php',
+        'Spatie\\QueryBuilder\\Includes\\IncludeInterface' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Includes/IncludeInterface.php',
+        'Spatie\\QueryBuilder\\Includes\\IncludedCount' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Includes/IncludedCount.php',
+        'Spatie\\QueryBuilder\\Includes\\IncludedRelationship' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Includes/IncludedRelationship.php',
+        'Spatie\\QueryBuilder\\QueryBuilder' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/QueryBuilder.php',
+        'Spatie\\QueryBuilder\\QueryBuilderRequest' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/QueryBuilderRequest.php',
+        'Spatie\\QueryBuilder\\QueryBuilderServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/QueryBuilderServiceProvider.php',
+        'Spatie\\QueryBuilder\\Sorts\\Sort' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Sorts/Sort.php',
+        'Spatie\\QueryBuilder\\Sorts\\SortsCallback' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Sorts/SortsCallback.php',
+        'Spatie\\QueryBuilder\\Sorts\\SortsField' => __DIR__ . '/..' . '/spatie/laravel-query-builder/src/Sorts/SortsField.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\Attribute\\AsCommand' => __DIR__ . '/..' . '/symfony/console/Attribute/AsCommand.php',
@@ -4358,10 +4421,10 @@ class ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit066e77a1ef97b745d234ef6382e7f6e9::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit67a75c58e3cd806ecdfb2f76aa0edb5a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit67a75c58e3cd806ecdfb2f76aa0edb5a::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit67a75c58e3cd806ecdfb2f76aa0edb5a::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit67a75c58e3cd806ecdfb2f76aa0edb5a::$classMap;
 
         }, null, ClassLoader::class);
     }
