@@ -3,7 +3,7 @@
 
 namespace App\Http\Controllers;
 
-use App\BooksCharacters;
+use App\Models\BooksCharacters;
 use Illuminate\Http\Request;
 
 

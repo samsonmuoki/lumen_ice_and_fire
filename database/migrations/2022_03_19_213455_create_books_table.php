@@ -14,8 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('books', function (Blueprint $table) {
-            // $table->engine = 'InnoDB';    //Add this line
-            $table->integer('id')->unique();
+            $table->increments('id')->unique();
             $table->string('name');
             $table->string('authors');
             $table->date('released');

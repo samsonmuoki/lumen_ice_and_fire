@@ -14,11 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            // $table->engine = 'InnoDB';    //Add this line
             $table->increments('id');
-            $table->string('content');
+            $table->text('content', 500);
             $table->string('ip_address');
-            $table->integer('book_id');
+            $table->integer('book_id')->unsigned();
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
             $table->timestamps();
         });
