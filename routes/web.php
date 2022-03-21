@@ -25,8 +25,8 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('books', ['uses' => 'BookController@create']);
 
     // comments apis
-    $router->post('books/{id}/comments', ['uses' => 'BookController@createComments']);  // TODO
-    // $router->get('comments', ['uses' => 'CommentController@listAllComments']); // comment this out
+    // $router->post('books/{id}/comments', ['uses' => 'BookController@createComments']);  // TODO
+    $router->get('comments', ['uses' => 'CommentController@listAllComments']);
     $router->post('comments', ['uses' => 'CommentController@create']);
 
     // characters apis

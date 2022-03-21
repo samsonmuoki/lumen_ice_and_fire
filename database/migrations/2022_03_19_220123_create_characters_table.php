@@ -14,8 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('characters', function (Blueprint $table) {
-            // $table->engine = 'InnoDB';    //Add this line
-            $table->integer('id')->unique();
+            $table->increments('id')->unique();
             $table->string('name');
             $table->enum('gender', array('Male', 'Female', 'other'));
             $table->date('date_of_birth');

@@ -4,33 +4,27 @@
 namespace App\Http\Controllers;
 
 
-use App\Book;
+use App\Models\Book;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class BookController extends Controller
 {
     public function listAllBooks()
     {
-        // $books = Book::all();
-        $books = Book::with('bookscharacters', 'comments')->get();
+        $books = Book::with('bookscharacters')->withCount('comments')->get();
         return response()->json($books->sortBy('released'));
     }
-
-    // public function listOneBook($id)
-    // {
-    //     return response()->json(Book::find($id));
-    // }
 
     public function listOneBook($id)
     {
         // $comments = Book::find(1)->comments;  // displays comments only
-
-        // $characters = Book::find(1)->bookscharacters;  // displays characters only
-        // return response()->json($characters);
-
         $book = Book::where('id', $id)
-            ->with(['bookscharacters', 'comments'])
+            ->with('bookscharacters')
+            ->with(['comments' => function ($query) {
+                $query->orderBy('id', 'desc');
+            }])
             ->first();
         return response()->json($book);
     }
