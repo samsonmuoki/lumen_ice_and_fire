@@ -17,7 +17,7 @@ return new class extends Migration
             // $table->engine = 'InnoDB';    //Add this line
             $table->increments('id');
             $table->string('content');
-            $table->string('ipaddress');
+            $table->string('ip_address');
             $table->integer('book_id');
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
             $table->timestamps();

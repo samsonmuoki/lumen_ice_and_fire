@@ -11,7 +11,7 @@ class Comment extends Model
 {
     // mass assignable
     protected $fillable = [
-        'book_id', 'content'
+        'book_id', 'content', 'ip_address'
     ];
 
 
