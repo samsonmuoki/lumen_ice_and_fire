@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '57c7ea7302403cf8010d87fb0b9f4de6749b538e',
+        'reference' => 'b9829bfc1abbc0bcc7303a4b3a45a8e825ed2e88',
         'name' => 'laravel/lumen',
         'dev' => true,
     ),
@@ -17,6 +17,15 @@
             'install_path' => __DIR__ . '/../brick/math',
             'aliases' => array(),
             'reference' => 'ca57d18f028f84f777b2168cd1911b0dee2343ae',
+            'dev_requirement' => false,
+        ),
+        'classpreloader/classpreloader' => array(
+            'pretty_version' => '4.2.0',
+            'version' => '4.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../classpreloader/classpreloader',
+            'aliases' => array(),
+            'reference' => 'af9284543aedb45ed58359374918141c0ac7ae34',
             'dev_requirement' => false,
         ),
         'cordoval/hamcrest-php' => array(
@@ -84,6 +93,15 @@
             'aliases' => array(),
             'reference' => 'd7f08a622b3346766325488aa32ddc93ccdecc75',
             'dev_requirement' => true,
+        ),
+        'flipbox/lumen-generator' => array(
+            'pretty_version' => '9.0.1',
+            'version' => '9.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../flipbox/lumen-generator',
+            'aliases' => array(),
+            'reference' => 'abfebdfe6555ef12d828ecd93fb2626b69ed651f',
+            'dev_requirement' => false,
         ),
         'fruitcake/php-cors' => array(
             'pretty_version' => 'v1.2.0',
@@ -367,7 +385,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '57c7ea7302403cf8010d87fb0b9f4de6749b538e',
+            'reference' => 'b9829bfc1abbc0bcc7303a4b3a45a8e825ed2e88',
             'dev_requirement' => false,
         ),
         'laravel/lumen-framework' => array(
@@ -446,7 +464,7 @@
             'install_path' => __DIR__ . '/../nikic/php-parser',
             'aliases' => array(),
             'reference' => '210577fe3cf7badcc5814d99455df46564f3c077',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'phar-io/manifest' => array(
             'pretty_version' => '2.0.3',
@@ -625,6 +643,15 @@
             'provided' => array(
                 0 => '1.0|2.0|3.0',
             ),
+        ),
+        'psy/psysh' => array(
+            'pretty_version' => 'v0.11.2',
+            'version' => '0.11.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psy/psysh',
+            'aliases' => array(),
+            'reference' => '7f7da640d68b9c9fec819caae7c744a213df6514',
+            'dev_requirement' => false,
         ),
         'ramsey/collection' => array(
             'pretty_version' => '1.2.2',
