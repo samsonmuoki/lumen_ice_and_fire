@@ -12,7 +12,7 @@ class Character extends Model
     // mass assignable attributes
 
     protected $fillable = [
-        'id', 'name', 'gender', 'date_of_birth'
+        'id', 'url', 'name', 'gender', 'date_of_birth'
     ];
 
 

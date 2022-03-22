@@ -24,7 +24,7 @@ class Book extends Model
     // mass assignable attributes
 
     protected $fillable = [
-        'id', 'name', 'authors', 'released'
+        'id', 'url', 'name', 'authors', 'released'
     ];
 
 
