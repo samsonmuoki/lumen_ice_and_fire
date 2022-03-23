@@ -19,7 +19,7 @@ $router->get('/', function () use ($router) {
 
 
 $router->group([
-    'middleware' => ['api', 'cors'],
+    'middleware' => ['cors'],
     'prefix' => 'api'
 ], function () use ($router) {
     // books apis
