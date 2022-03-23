@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('characters', function (Blueprint $table) {
-            $table->increments('id')->unique();
+            $table->integer('id')->unique();
+            $table->string('url')->unique();
             $table->string('name');
-            $table->enum('gender', array('Male', 'Female', 'other'));
+            $table->enum('gender', array('Male', 'Female', ''));
             $table->date('date_of_birth');
             $table->timestamps();
         });

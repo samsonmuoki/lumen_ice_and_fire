@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->text('content', 500);
             $table->string('ip_address');
-            $table->integer('book_id')->unsigned();
+            $table->integer('book_id');
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
             $table->timestamps();
         });
