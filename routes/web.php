@@ -18,7 +18,10 @@ $router->get('/', function () use ($router) {
 });
 
 
-$router->group(['prefix' => 'api'], function () use ($router) {
+$router->group([
+    'middleware' => ['api', 'cors'],
+    'prefix' => 'api'
+], function () use ($router) {
     // books apis
     $router->get('books', ['uses' => 'BookController@listAllBooks']);
     $router->get('books/{id}', ['uses' => 'BookController@listOneBook']);
