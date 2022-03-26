@@ -6,22 +6,10 @@ namespace App\Http\Controllers;
 use App\Models\Character;
 use Illuminate\Http\Request;
 
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Collection;
-use Spatie\QueryBuilder\QueryBuilder;
 
 
 class CharacterController extends Controller
 {
-    // public function listAllCharacters(Request $request)
-    // {
-    //     $characters = QueryBuilder::for(Character::class)
-    //         ->allowedFilters(['gender'])
-    //         ->get('name');
-    //     return response()->json($characters);
-    // }
-
-
     public function listAllCharacters(Request $request)
     {
         $characters = $this->applyFilters($request);
@@ -39,11 +27,36 @@ class CharacterController extends Controller
         return response()->json($payload);
     }
 
-    private function applyFilters(Request $request): Collection
+    private function applyFilters(Request $request)
     {
-        return Character::query()
-            ->when($request->query('gender'), fn (Builder $query, $gender) => $query->where('gender', $gender))
-            ->get();
+        $characters = Character::all();
+
+        $genderFilter = $request->input('gender');
+        if ($genderFilter) {
+            $characters = Character::query()
+                ->when($genderFilter, fn ($query, $genderFilter) => $query->where('gender', $genderFilter))
+                ->get();
+        }
+
+        $sortByGender = $request->input('sort_by_gender');
+        if ($sortByGender) {
+            $characters = Character::query()
+                ->when($sortByGender, fn ($query, $sortByGender) => $query->orderBy('gender', $sortByGender))->get();
+        }
+
+        $sortByName = $request->input('sort_by_name');
+        if ($sortByName) {
+            $characters = Character::query()
+                ->when($sortByName, fn ($query, $sortByName) => $query->orderBy('name', $sortByName))->get();
+        }
+
+        $sortByAge = $request->input('sort_by_age');
+        if ($sortByAge) {
+            $characters = Character::query()
+                ->when($sortByAge, fn ($query, $sortByAge) => $query->orderBy('age', $sortByAge))->get();
+        }
+
+        return $characters;
     }
 
     public function listOneCharacter($id)

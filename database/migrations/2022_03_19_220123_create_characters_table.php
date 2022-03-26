@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('characters', function (Blueprint $table) {
             $table->integer('id')->unique();
-            $table->string('url')->unique();
             $table->string('name');
             $table->enum('gender', array('Male', 'Female', ''));
             $table->date('date_of_birth');

@@ -28,7 +28,6 @@ class CharacterSeeder extends Seeder
 
             Character::firstOrCreate([
                 'id' => $id,
-                'url' => $url,
                 'name' => $name,
                 'gender' => $gender,
                 'date_of_birth' => $date_of_birth,

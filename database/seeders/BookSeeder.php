@@ -30,7 +30,7 @@ class BookSeeder extends Seeder
 
             Book::firstOrCreate(
                 ['id' => $id],
-                ['url' => $url, 'name' => $name, 'authors' => $authors, 'released' => $released]
+                ['name' => $name, 'authors' => $authors, 'released' => $released]
             );
 
             try {
