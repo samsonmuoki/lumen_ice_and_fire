@@ -13,16 +13,11 @@ use Spatie\QueryBuilder\QueryBuilder;
 
 class CharacterController extends Controller
 {
-    // public function listAllCharacters()
-    // {
-    //     return response()->json(Character::all());
-    // }
-
-    // public function listAllCharacters()
+    // public function listAllCharacters(Request $request)
     // {
     //     $characters = QueryBuilder::for(Character::class)
-    //         ->allowedFilters('gender')
-    //         ->get();
+    //         ->allowedFilters(['gender'])
+    //         ->get('name');
     //     return response()->json($characters);
     // }
 
@@ -31,7 +26,17 @@ class CharacterController extends Controller
     {
         $characters = $this->applyFilters($request);
 
-        return response()->json($characters);
+        $number_of_characters = $characters->count();
+        $total_age_in_years = $characters->sum('age_in_years');
+        $total_age_in_years = number_format((float)$characters->sum('age_in_years'), 2, '.', '');
+        $total_age_in_months = $characters->sum('age_in_months');
+        $payload = array(
+            'number_of_characters' => $number_of_characters,
+            'total_age_in_years' => $total_age_in_years,
+            'total_age_in_months' => $total_age_in_months,
+            'characters' => $characters
+        );
+        return response()->json($payload);
     }
 
     private function applyFilters(Request $request): Collection

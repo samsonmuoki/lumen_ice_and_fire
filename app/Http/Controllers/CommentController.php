@@ -18,7 +18,7 @@ class CommentController extends Controller
     public function create(Request $request)
     {
         $comment = new Comment;
-        $comment->book_url = $request->book_url;
+        $comment->book_id = $request->book_id;
         $comment->content = $request->content;
         $comment->ip_address = $request->ip();
         $comment->save();
