@@ -53,7 +53,7 @@ class CharacterController extends Controller
         $sortByAge = $request->input('sort_by_age');
         if ($sortByAge) {
             $characters = Character::query()
-                ->when($sortByAge, fn ($query, $sortByAge) => $query->orderBy('age', $sortByAge))->get();
+                ->when($sortByAge, fn ($query, $sortByAge) => $query->orderBy('date_of_birth', $sortByAge))->get();
         }
 
         return $characters;
