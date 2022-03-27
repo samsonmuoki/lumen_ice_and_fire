@@ -42,6 +42,5 @@ class Character extends Model
     protected $hidden = [];
 
 
-    // below is test code
     protected $appends = ['age_in_years', 'age_in_months'];
 }
