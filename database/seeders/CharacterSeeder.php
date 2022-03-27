@@ -24,7 +24,9 @@ class CharacterSeeder extends Seeder
             $id = explode("/", $url)[5];
             $name = $character['name'];
             $gender = $character['gender'];
-            $date_of_birth = '2000-01-10';
+            $timestamp = mt_rand(1, time());
+            $date_of_birth = date("d M Y", $timestamp);
+
 
             Character::firstOrCreate([
                 'id' => $id,
